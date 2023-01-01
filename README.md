@@ -34,38 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-async-none-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-noneByAsync = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-none-by@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var noneByAsync = require( 'path/to/vendor/umd/utils-async-none-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-async-none-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.noneByAsync;
-})();
-</script>
+var noneByAsync = require( '@stdlib/utils-async-none-by' );
 ```
 
 #### noneByAsync( collection, \[options,] predicate, done )
@@ -346,12 +338,7 @@ The function accepts the same `options` as `noneByAsync()`.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript">
-(function () {
+```javascript
 var resolve = require( 'path' ).resolve;
 var readFile = require( '@stdlib/fs-read-file' );
 var noneByAsync = require( '@stdlib/utils-async-none-by' );
@@ -387,11 +374,6 @@ function predicate( file, next ) {
 }
 
 noneByAsync( files, predicate, done );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -451,7 +433,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -502,17 +484,17 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/utils/async/any-by]: https://github.com/stdlib-js/utils-async-any-by/tree/umd
+[@stdlib/utils/async/any-by]: https://github.com/stdlib-js/utils-async-any-by
 
-[@stdlib/utils/async/every-by]: https://github.com/stdlib-js/utils-async-every-by/tree/umd
+[@stdlib/utils/async/every-by]: https://github.com/stdlib-js/utils-async-every-by
 
-[@stdlib/utils/async/for-each]: https://github.com/stdlib-js/utils-async-for-each/tree/umd
+[@stdlib/utils/async/for-each]: https://github.com/stdlib-js/utils-async-for-each
 
-[@stdlib/utils/none-by]: https://github.com/stdlib-js/utils-none-by/tree/umd
+[@stdlib/utils/none-by]: https://github.com/stdlib-js/utils-none-by
 
-[@stdlib/utils/async/none-by-right]: https://github.com/stdlib-js/utils-async-none-by-right/tree/umd
+[@stdlib/utils/async/none-by-right]: https://github.com/stdlib-js/utils-async-none-by-right
 
-[@stdlib/utils/async/some-by]: https://github.com/stdlib-js/utils-async-some-by/tree/umd
+[@stdlib/utils/async/some-by]: https://github.com/stdlib-js/utils-async-some-by
 
 <!-- </related-links> -->
 
